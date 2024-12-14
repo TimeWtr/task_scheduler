@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root  # root 用户的密码
+      MYSQL_DATABASE: tasks  # 启动时创建的数据库
+      MYSQL_USER: ts  # 创建的用户
+      MYSQL_PASSWORD: task_scheduler  # 用户的密码
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - '3306:3306'
