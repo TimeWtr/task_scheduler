@@ -7,7 +7,7 @@ import (
 
 var ErrOverMaxCount = errors.New("over max count")
 
-type ScheduleStrategy interface {
+type RetryStrategy interface {
 	Next() (time.Duration, error)
 }
 

@@ -1,5 +1,6 @@
 package _const
 
+// PreemptStrategy 抢占策略
 type PreemptStrategy int
 
 const (
